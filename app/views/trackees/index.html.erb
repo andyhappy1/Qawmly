@@ -1,0 +1,29 @@
+<h1>Listing trackees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trackees.each do |trackee| %>
+      <tr>
+        <td><%= trackee.name %></td>
+        <td><%= trackee.email %></td>
+        <td><%= link_to 'Show', trackee %></td>
+        <td><%= link_to 'Edit', edit_trackee_path(trackee) %></td>
+        <td><%= link_to 'Destroy', trackee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trackee', new_trackee_path %>

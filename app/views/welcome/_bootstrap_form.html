@@ -1,0 +1,14 @@
+
+  
+
+  <%= bootstrap_form_for(User.new, html: { class: 'form-horizontal' }, method: :post) do |f| %>
+      <%= f.email_field :name, class: "form-control", control_col: "col-xs-8", placeholder: "Name", label:"Name" %>
+      <%= f.name_field :email, class: "form-control", control_col: "col-xs-8", placeholder: "Email", label: "Email" %>
+ 
+      <%= f.submit "Keep Me Updated", class:"btn btn-success", control_col: "col-xs-offset-2 col-xs-4"  %>
+<% end %>
+
+ 
+
+ 
+

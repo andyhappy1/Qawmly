@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trackee.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @trackee.email %>
+</p>
+
+<%= link_to 'Edit', edit_trackee_path(@trackee) %> |
+<%= link_to 'Back', trackees_path %>
