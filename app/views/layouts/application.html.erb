@@ -16,6 +16,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+
+  <link href="http://vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
+  <script src="http://vjs.zencdn.net/4.6/video.js"></script>
+
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/css/video-default.css" rel="stylesheet">
+<script type="text/javascript" src="assets/js/jquery-1.8.1.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.video-ui.js"></script>
+
+
+
 </head>
 <header>
     <nav class="navbar navbar-inverse" role="navigation">
@@ -31,8 +42,8 @@
       
       
 
-       <img src="qtransparent.png" class="img-responsive" alt="responsive image" bgcolor="#333333">
-    
+      
+        <img src="SVLogo51x52square.png" class="img-responsive" alt="responsive image" bgcolor="#333333">
       
       
     
@@ -80,6 +91,25 @@ $(document).ready(function () {
     $(".player").mb_YTPlayer();
 
 });</script>
+
+<script type="text/javascript">
+  // Once the video is ready
+  _V_("example_video_1").ready(function(){
+
+    var myPlayer = this;    // Store the video object
+    var aspectRatio = 1; // Make up an aspect ratio
+
+    function resizeVideoJS(){
+      // Get the parent element's actual width
+      var width = document.getElementById(myPlayer.id).parentElement.offsetWidth;
+      // Set width to fill parent element, Set height
+      myPlayer.width(width).height( width * aspectRatio );
+    }
+
+    resizeVideoJS(); // Initialize the function
+    window.onresize = resizeVideoJS; // Call the function on resize
+  });
+</script>
 
 
 </body>
