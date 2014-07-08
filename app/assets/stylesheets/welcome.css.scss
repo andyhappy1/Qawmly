@@ -6,10 +6,32 @@
 @import url(//fonts.googleapis.com/css?family=Lato:400,900);
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
-	h3{
 
-	   color: #ff6600;
+
+@mixin phone {
+	
+
+	@media screen and (max-width:480px) {
+
+		@content;
 	}
+}
+
+	.h3 {
+
+	   
+
+	   @include phone {
+
+	   		 .h3 {
+
+	       		display:none;
+	    		}
+
+	   		}
+		}
+
+	
 
 	.form-horizontal{
 		padding-top: 85px;
@@ -18,18 +40,18 @@
 	}
 
 	.help-block{
-		color: #000;
-		font-family: 'Lato', sans-serif;
+		color: rgb(215, 215, 215);
+		font-family: 'Buenard', serif;
 	}
 
 	label {
 
-		font-family: 'Lato', sans-serif;
-  		color: #000;
+		font-family: 'Buenard', serif;
+  		color: rgb(215, 215, 215);
 	}
 
 	button  {
-
+		background-color: rgb(72,97,35);
 		font-family: 'Lato', sans-serif;
 
 	}
@@ -45,12 +67,28 @@
     background-color:#000;
     color: #000;
 	}
-
+ 	 		
     body {
 
     background-color: #000;
 
+
+
     }
+
+    #background{
+
+    position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -1;
+   overflow: hidden;
+
+    }
+
+    
    
 	.animate {
 		-webkit-transition: all 0.3s ease-in-out;
@@ -81,7 +119,8 @@
 		bottom: -100%;
 		left: 0;
 		padding: 0 15px;
-		background: rgb(255, 255, 255);
+		background: rgb(0, 0, 0);
+		color: rgb(255, 255, 255);
 		text-align: center;
 	}
 	.info-card .info-card-details::-webkit-scrollbar {
@@ -119,7 +158,9 @@
 	}
 	.info-card .info-card-details .info-card-header h1,	
 	.info-card .info-card-details .info-card-header h3 {
-		color: rgb(62, 62, 62);
+
+		color: rgb(255, 255, 255);
+		
 		font-size: 22px;
 		font-weight: 900;
 		text-transform: uppercase;
@@ -127,7 +168,7 @@
 		padding: 0 !important;
 	}
 	.info-card .info-card-details .info-card-header h3 {
-		color: rgb(142, 182, 52);
+		color: rgb(72, 97, 35);
 		font-size: 15px;
 		font-weight: 400;
 		margin-top: 5px;
@@ -199,16 +240,28 @@
 		
 
 }
-.video-section h1, .video-section h3{
+.video-section h1, .video-section h3, .video-section h2{
 text-align:center;
-color:#ff6600;
-ont-family: 'Buenard', serif;
+
+color: #D8782D;
+font-family: 'Buenard', serif;
 font-weight:bold;
 text-transform: uppercase;
 margin: 40px auto 0px;
 text-shadow: 2px 2px 2px #000;
 -webkit-text-shadow: 1px 1px 1px #000;
 -moz-text-shadow: 1px 1px 1px #000;
+
+	@include phone {
+
+	   		 h3 {
+
+	       		display:none;
+	    		}
+
+	   		}
+
+
 }
 .video-section h1{
 font-size:110px;
@@ -220,11 +273,61 @@ text-shadow: 1px 1px 1px #000;
 -webkit-text-shadow: 1px 1px 1px #000;
 -moz-text-shadow: 1px 1px 1px #000;
 }
-.video-section h3{
+
+.video-section h2{
+
+
+color: rgb(35, 46, 97);
+
+font-family: 'Buenard', serif;
+
+text-transform: uppercase;
 font-size: 25px;
 font-weight:lighter;
 margin: 0px auto 15px;
 }
+
+.video-section h3{
+font-size: 25px;
+font-weight:lighter;
+margin: 0px auto 15px;
+
+@include phone {
+
+	   		 h3 {
+
+	       		display:none;
+	    		}
+
+	   		}
+
+
+}
+
+.video-section footer{
+	font-family: 'Buenard', serif;
+	text-transform: uppercase;
+	color: rgb(255,255,255);
+}
+
+.video-section input{
+	
+	background-color: #000;
+	color: #FFF;
+}
+
+.video-section button  {
+
+		color: rgb(255, 255, 255);
+		background-color: rgb(72,97,35);
+		font-family: 'Lato', sans-serif;
+
+	}
+
+
+
+
+
 .video-section .buttonBar{display:none;}
 .player {font-size: 1px;}
 
