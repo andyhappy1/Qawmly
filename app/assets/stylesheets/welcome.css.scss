@@ -51,7 +51,10 @@
 	}
 
 	button  {
-		background-color: rgb(72,97,35);
+
+	     background-color: #D8782D;
+	     color: #000;
+		
 		font-family: 'Lato', sans-serif;
 
 	}
@@ -164,6 +167,18 @@
 		text-align: center;
 	}
 	.info-card .info-card-details .info-card-detail .social a {
+		position: relative;
+		display: inline-block;
+		min-width: 40px;
+		padding: 10px 0px;
+		margin: 0px 5px;
+		overflow: hidden;
+		text-align: center;
+		background-color: rgb(215, 215, 215);
+		border-radius: 40px;
+	}
+
+	.social a {
 		position: relative;
 		display: inline-block;
 		min-width: 40px;
@@ -303,7 +318,8 @@ margin: 0px auto 15px;
 .video-section button  {
 
 		color: rgb(255, 255, 255);
-		background-color: rgb(72,97,35);
+		background-color: #D8782D;
+		
 		font-family: 'Lato', sans-serif;
 
 	}
