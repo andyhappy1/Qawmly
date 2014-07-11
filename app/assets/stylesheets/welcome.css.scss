@@ -40,14 +40,19 @@
 	}
 
 	.help-block{
-		color: rgb(215, 215, 215);
-		font-family: 'Buenard', serif;
+		margin-top: 50px;
+		color: #FFF;
+		font-family: 'Lato', sans-serif;
+		font-size:10pt;
+		text-shadow: 5px 5px 5px #000;
 	}
 
 	label {
 
-		font-family: 'Buenard', serif;
-  		color: rgb(215, 215, 215);
+		font-family: 'Lato', sans-serif;
+  		color: #D8782D;
+  		font-size: 12pt;
+  		text-shadow: 1px 1px 1px #000;
 	}
 
 	button  {
@@ -62,13 +67,14 @@
 
 	input, textarea{
 
-    background-color:#000;
-    color: #000;
+    color: #D8782D;
+    
 	}
 
 	#Email, #Name {
-    background-color:#FFF;
-    color: #000;
+    background-color: #D8782D;
+		
+    color: #D8782D;
 	}
  	
 
@@ -321,6 +327,7 @@ margin: 0px auto 15px;
 		background-color: #D8782D;
 		
 		font-family: 'Lato', sans-serif;
+		text-shadow: 1px 1px 1px #000;
 
 	}
 
